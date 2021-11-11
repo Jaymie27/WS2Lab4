@@ -1,0 +1,21 @@
+<% #Jaymie Deschênes 10 novembre 2021 %>
+<h1>
+    Recette de <%= current_user.email%>
+</h1>
+<h1>
+    <%= @recette.titre%>
+</h1> 
+<h2>
+    Liste des ingrédients 
+</h2> 
+<% @ingredients.each_with_index do |i, index| %>
+    <p>
+        <%= i.nom %>  Quantité : <%= @rec_ingredients[index].quantite %> <%= @rec_ingredients[index].unite %>
+    </p>
+<% end %> 
+<h2>
+    Étapes
+</h2> 
+<p>
+    <%= @recette.etapes %>
+</p>

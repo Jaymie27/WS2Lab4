@@ -1,0 +1,9 @@
+<% #Jaymie Deschênes 10 novembre 2021 %>
+<h1>Liste des Recettes de <%= current_user.email%> </h1>
+<% @recettes.each do |r| %>
+    <p><%= r.titre %> 
+        <a href=/mesrecettes/<%=r.id %>>
+            recette
+        </a>
+    </p>
+<% end %>
